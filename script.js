@@ -11,16 +11,16 @@ function convertValues() {
   ); // valor em real
   const currencyValueConverted = document.querySelector(".currency-value"); // outras moedas
 
-  const dolarToday = 5.2; //valor do dolar
-  const euroToday = 6.2; // vvalor do euro
-  const libraToday = 6.4; // valor da libra
+  const dolarToday = 4.8; //valor do dolar
+  const euroToday = 5.2; // vvalor do euro
+  const libraToday = 6.04; // valor da libra
   const bitcoinToday = 177.3; // valor do bitcoin
 
   if (
     currencySelectPrimary.value == "real" &&
     currencySelect.value == "dolar"
   ) {
-    // se o select estiver selecionado o valor de dolar, entre aqui
+    // conversão de REAL para Dolar
     currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
       style: "currency",
       currency: "USD",
@@ -28,7 +28,7 @@ function convertValues() {
   }
 
   if (currencySelectPrimary.value == "real" && currencySelect.value == "euro") {
-    // se o select estiver selecionado o valor de euro, entre aqui
+    // conversão de REAL para Euro
     currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
       style: "currency",
       currency: "EUR",
@@ -39,7 +39,7 @@ function convertValues() {
     currencySelectPrimary.value == "real" &&
     currencySelect.value == "libra"
   ) {
-    // se o select estiver selecionado o valor de libra, entre aqui
+    // conversão de REAL para Libra
     currencyValueConverted.innerHTML = new Intl.NumberFormat("en-GB", {
       style: "currency",
       currency: "GBP",
@@ -50,7 +50,7 @@ function convertValues() {
     currencySelectPrimary.value == "real" &&
     currencySelect.value == "bitcoin"
   ) {
-    // se o select estiver selecionado o valor de bitcoin, entre aqui
+    // conversão de REAL para Bitcoin
     currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
       style: "currency",
       currency: "BTC",
@@ -66,11 +66,44 @@ function convertValues() {
     currencySelectPrimary.value == "dolar" &&
     currencySelect.value == "real"
   ) {
-    // se o select estiver selecionado o valor de bitcoin, entre aqui
+    // conversão de Dolar para Real
     currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
       style: "currency",
       currency: "BRL",
     }).format(inputCurrencyValue * dolarToday);
+  }
+
+  if (
+    currencySelectPrimary.value == "dolar" &&
+    currencySelect.value == "euro"
+  ) {
+    // conversão de Dolar para Euro
+    currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
+      style: "currency",
+      currency: "EUR",
+    }).format(inputCurrencyValue * 0.92);
+  }
+
+  if (
+    currencySelectPrimary.value == "dolar" &&
+    currencySelect.value == "libra"
+  ) {
+    // conversão de Dolar para Libra
+    currencyValueConverted.innerHTML = new Intl.NumberFormat("en-GB", {
+      style: "currency",
+      currency: "GBP",
+    }).format(inputCurrencyValue * 0.80);
+  }
+
+  if (
+    currencySelectPrimary.value == "dolar" &&
+    currencySelect.value == "bitcoin"
+  ) {
+    // conversão de Dolar para Libra
+    currencyValueConverted.innerHTML = new Intl.NumberFormat("de-De", {
+      style: "currency",
+      currency: "BTC",
+    }).format(inputCurrencyValue * 0.0027);
   }
 
   function formatCurrency() {
@@ -79,10 +112,25 @@ function convertValues() {
         style: "currency",
         currency: "USD",
       }).format(inputCurrencyValue);
-    } else if (currencySelectPrimary.value == "real") {
+    } 
+     if (currencySelectPrimary.value == "real") {
       currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
         style: "currency",
         currency: "BRL",
+      }).format(inputCurrencyValue);
+    }
+
+    if (currencySelectPrimary.value == "euro") {
+      currencyValueToConvert.innerHTML = new Intl.NumberFormat("de-DE", {
+        style: "currency",
+        currency: "EUR",
+      }).format(inputCurrencyValue);
+    }
+
+    if (currencySelectPrimary.value == "libra") {
+      currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-GB", {
+        style: "currency",
+        currency: "GBP",
       }).format(inputCurrencyValue);
     }
   }
