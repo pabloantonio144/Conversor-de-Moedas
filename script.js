@@ -57,11 +57,6 @@ function convertValues() {
     }).format(inputCurrencyValue / bitcoinToday);
   }
 
-  //currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
-  //style: "currency",
-  //currency: "BRL",
-  //}).format(inputCurrencyValue);
-
   if (
     currencySelectPrimary.value == "dolar" &&
     currencySelect.value == "real"
@@ -81,7 +76,7 @@ function convertValues() {
     currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
       style: "currency",
       currency: "EUR",
-    }).format(inputCurrencyValue * 0.92);
+    }).format(inputCurrencyValue * 0.91); // valor do euro referente a 1 dolar no dia 20/11/2023
   }
 
   if (
@@ -92,18 +87,150 @@ function convertValues() {
     currencyValueConverted.innerHTML = new Intl.NumberFormat("en-GB", {
       style: "currency",
       currency: "GBP",
-    }).format(inputCurrencyValue * 0.80);
+    }).format(inputCurrencyValue * 0.80); // valor da libra refrente a 1 dolar no dia 20/11/2023
   }
 
   if (
     currencySelectPrimary.value == "dolar" &&
     currencySelect.value == "bitcoin"
   ) {
-    // conversão de Dolar para Libra
+    // conversão de Dolar para Bitcoin
     currencyValueConverted.innerHTML = new Intl.NumberFormat("de-De", {
       style: "currency",
       currency: "BTC",
-    }).format(inputCurrencyValue * 0.0027);
+    }).format(inputCurrencyValue * 0.0027);// valor do dolar referente a 1 bitcoin no dia 20/11/2023
+  }
+
+  if (
+    currencySelectPrimary.value == "euro" &&
+    currencySelect.value == "real"
+  ) {
+    // conversão de Euro para Real
+    currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
+      style: "currency",
+      currency: "BRL",
+    }).format(inputCurrencyValue * 5.31); //valor do real referente a 1 euro no dia 20/11/2023
+  }
+
+  if (
+    currencySelectPrimary.value == "euro" &&
+    currencySelect.value == "dolar"
+  ) {
+    // conversão de Euro para Dolar
+    currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
+    }).format(inputCurrencyValue * 1.09); //valor do dolar referente a 1 euro no dia 20/11/2023
+  }
+
+  if (
+    currencySelectPrimary.value == "euro" &&
+    currencySelect.value == "libra"
+  ) {
+    // conversão de euro para Libra
+    currencyValueConverted.innerHTML = new Intl.NumberFormat("en-GB", {
+      style: "currency",
+      currency: "GBP",
+    }).format(inputCurrencyValue * 0.88); // valor do euro referente a 1 libra no dia 20/11/2023
+  }
+
+  if (
+    currencySelectPrimary.value == "euro" &&
+    currencySelect.value == "bitcoin"
+  ) {
+    // conversão de euro para Bitcoin
+    currencyValueConverted.innerHTML = new Intl.NumberFormat("de-De", {
+      style: "currency",
+      currency: "BTC",
+    }).format(inputCurrencyValue * 0.0029); // valor do bitcoin referente a 1 euro no dia 20/11/2023
+  }
+
+  if (
+    currencySelectPrimary.value == "libra" &&
+    currencySelect.value == "real"
+  ) {
+    // conversão de Libra para Real
+    currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
+      style: "currency",
+      currency: "BRL",
+    }).format(inputCurrencyValue * 6.07); //valor do real referente a 1 libra no dia 20/11/2023
+  }
+
+  if (
+    currencySelectPrimary.value == "libra" &&
+    currencySelect.value == "dolar"
+  ) {
+    // conversão de Libra para Dolar
+    currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
+    }).format(inputCurrencyValue * 1.25); //valor do dolar referente a 1 libra no dia 20/11/2023
+  }
+
+  if (
+    currencySelectPrimary.value == "libra" &&
+    currencySelect.value == "euro"
+  ) {
+    // conversão de libra para Euro
+    currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
+      style: "currency",
+      currency: "EUR",
+    }).format(inputCurrencyValue * 1.14); // valor do euro referente a 1 libra no dia 20/11/2023
+  }
+
+  if (
+    currencySelectPrimary.value == "libra" &&
+    currencySelect.value == "bitcoin"
+  ) {
+    // conversão de libra para Bitcoin
+    currencyValueConverted.innerHTML = new Intl.NumberFormat("de-De", {
+      style: "currency",
+      currency: "BTC",
+    }).format(inputCurrencyValue * 0.0033); // valor do bitcoin referente a 1 libra no dia 20/11/2023
+  }
+
+  if (
+    currencySelectPrimary.value == "bitcoin" &&
+    currencySelect.value == "real"
+  ) {
+    // conversão de Bitcoin para Real
+    currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
+      style: "currency",
+      currency: "BRL",
+    }).format(inputCurrencyValue * 182.018); //valor do real referente a 1 bitcoin no dia 20/11/2023
+  }
+
+  if (
+    currencySelectPrimary.value == "bitcoin" &&
+    currencySelect.value == "dolar"
+  ) {
+    // conversão de Bitcoin para Dolar
+    currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
+    }).format(inputCurrencyValue * 37.504); //valor do dolar referente a 1 bitcoin no dia 20/11/2023
+  }
+
+  if (
+    currencySelectPrimary.value == "bitcoin" &&
+    currencySelect.value == "euro"
+  ) {
+    // conversão de bitcoin para Euro
+    currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
+      style: "currency",
+      currency: "EUR",
+    }).format(inputCurrencyValue * 34.301); // valor do euro referente a 1 bitcoin no dia 20/11/2023
+  }
+
+  if (
+    currencySelectPrimary.value == "bitcoin" &&
+    currencySelect.value == "libra"
+  ) {
+    // conversão de bitcoin para Libra
+    currencyValueConverted.innerHTML = new Intl.NumberFormat("en-GB", {
+      style: "currency",
+      currency: "GBP",
+    }).format(inputCurrencyValue * 30.016); // valor da libra referente a 1 bitcoin no dia 20/11/2023
   }
 
   function formatCurrency() {
@@ -119,7 +246,6 @@ function convertValues() {
         currency: "BRL",
       }).format(inputCurrencyValue);
     }
-
     if (currencySelectPrimary.value == "euro") {
       currencyValueToConvert.innerHTML = new Intl.NumberFormat("de-DE", {
         style: "currency",
@@ -131,6 +257,12 @@ function convertValues() {
       currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-GB", {
         style: "currency",
         currency: "GBP",
+      }).format(inputCurrencyValue);
+    }
+    if (currencySelectPrimary.value == "bitcoin") {
+      currencyValueToConvert.innerHTML = new Intl.NumberFormat("de-DE", {
+        style: "currency",
+        currency: "BTC",
       }).format(inputCurrencyValue);
     }
   }

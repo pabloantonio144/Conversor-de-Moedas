@@ -34,15 +34,17 @@ video {
 
 main {
   width: 370px;
-  
   border-radius: 20px;
-  background-color: #fff;
+  background-color: transparent;
   margin: 20px auto 40px;
   padding: 44px 24px 23px;
+  border:  2px solid rgba(255, 255, 255, .5);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0,0, 0, .5);
 }
 
 label {
-  color: #777777;
+  color: #ffffff;
   font-weight: 400;
   font-size: 1rem;
 }
@@ -66,7 +68,7 @@ input {
 button {
   width: 100%;
   border-radius: 5px;
-  background: #772fd3;
+  background: #162938;
   border: none;
   height: 48px;
   color: #ffffff;
@@ -76,7 +78,7 @@ button {
 }
 
 button:hover {
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 button:active {
@@ -84,7 +86,7 @@ button:active {
 }
 
 section {
-  border: 1px solid #772fd3;
+  border: 2px solid #555555;
   border-radius: 5px;
   margin-top: 36px;
   padding: 12px;
@@ -95,6 +97,7 @@ section {
 
 .arrow-img {
   margin: 15px;
+  width: 60px;
 }
 
 .currency-box {
@@ -105,12 +108,12 @@ section {
 }
 
 .currency {
-  color: #777777;
+  color: #ffffff;
   font-size: 1rem;
 }
 
 .currency-value, .currency-value-to-convert {
-    color: #555555;
+    color: #ffffff;
     font-weight: 700;
     font-size: 1.5rem;
 }
